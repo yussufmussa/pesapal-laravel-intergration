@@ -19,3 +19,12 @@ Route::get('/', function () {
 });
 
 Route::get('/generateToken', [PaymentController::class, 'generateToken']);
+Route::get('/registerIPN', [PaymentController::class, 'registerIPN']);
+Route::get('/getIPNList', [PaymentController::class, 'getIPNList']);
+Route::get('/submitOrder', [PaymentController::class, 'submitOrder']);
+Route::get('/callback', [PaymentController::class, 'callback']);
+Route::get('/getTransactionStatus/{orderTrackingId}', [PaymentController::class, 'getTransactionStatus'])->name('get.transaction.status');
+
+
+
+
